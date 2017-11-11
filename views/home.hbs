@@ -9,14 +9,13 @@
 </head>
 
 <body>
-  <h1>Here's the {{pageTitle}}</h1>
-  <p>{{welcomeContent}}</p>
+  {{> header}}
 
-<footer>
-  <p>
-    Copyright {{currentYear}}
-  </p>
-</footer>
+  <!-- references the screamIt helper and the welcomeContent string from server.js -->
+  <p>{{screamIt welcomeContent}}</p>
+
+  <!-- Tag to add a handlebars (hbs) partial template -->
+  {{> footer}}
 
 </body>
 </html>

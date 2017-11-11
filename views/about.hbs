@@ -9,14 +9,11 @@
 </head>
 
 <body>
-  <h1>Here's the {{pageTitle}}</h1>
+  {{> header}}
   <p>Here's the About content.</p>
 
-<footer>
-  <p>
-    Copyright {{currentYear}}
-  </p>
-</footer>
+<!-- Tag to add a handlebars (hbs) partial template -->
+{{> footer}}
 
 </body>
 </html>

@@ -4,6 +4,10 @@ const express = require('express'),
   hbs = require('hbs'),
   fs = require('fs');
 
+// process.env is an object that stores all our env vars as key/value pairs
+// Set port to process.env.PORT (Heroku does this) or default to 3000 to run locally
+const port = process.env.PORT || 3000;
+
 const app = express();
 
 app.set('view engine', 'hbs');
@@ -74,7 +78,7 @@ app.get('/bad', (req, res) => {
   });
 });
 
-// listen on localhost:3000
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+// listen on port (set above)
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
